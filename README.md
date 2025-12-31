@@ -1,12 +1,20 @@
-# React + Vite
+# Bawarchi-Ai 🍳
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A smart recipe generator built with React and Gemini AI.
 
-Currently, two official plugins are available:
+Enter a list of ingredients and get a complete recipe suggestion — just like a chef!
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🧪 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+✔ Get recipe suggestions from AI  
+✔ Nicely formatted recipe display  
+✔ Smooth UI with scroll-into-view  
+✔ Ready for deployment
+
+---
+
+## 🚀 How to Run Locally
+
+1. Clone the repo  
