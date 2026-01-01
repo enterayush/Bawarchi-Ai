@@ -19,7 +19,7 @@ export default function Recipe({ recipe }) {
 
     return (
         <section ref={recipeRef} className="suggested-recipe">
-        <h2>Chef Claude Recommends:</h2>
+        <h2>Bawarchi says — you’ll thank me later 😎:</h2>
         <Markdown>{recipe}</Markdown>
         </section>
     );
