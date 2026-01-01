@@ -10,7 +10,8 @@ header{
   justify-content: center;
   gap: 10px;
   padding: 14px 20px;
-  background-color: white;
+  background-color: #4A2E2A;
+  color: white;
   border-bottom: 1px solid #dededd;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -22,7 +23,7 @@ header>h1 {
 
 main{
   padding: 90px 72px;
-  background-color: #fafaf7;
+  background-color: #FAF7F2;
 }
 
 form{
@@ -93,10 +94,16 @@ section ul{
   background-color: #d17557;
   color: white;
   border: none;
+  font: 0.9em sans-serif;
   border-radius: 6px;
   width: 140px;
   
 }
+.get-recipe-button button:hover {
+  background-color: #4A2E2A;
+  cursor: pointer;
+}
+
 .get-recipe-button h3{
   margin-bottom: 5px;
   font: 500 1.3em sans-serif;
@@ -127,11 +134,32 @@ html {
   max-width: 720px;
   margin: 40px auto;
   padding: 24px 28px;
-  background-color: #ffffff;
+
+  background: #FFFFF0; /* ivory base */
   border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+  border-radius: 14px;
+  box-shadow: 16px 20px 60px 10px rgba(0, 0, 0, 0.40);
+
+  position: relative;
+  overflow: hidden;
 }
+/* texture overlay */
+.suggested-recipe::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("../public/recipe\ bg3.png");
+  background-size: cover;
+  background-position: center;
+
+
+  opacity: 0.40;         /* ← KEY part */
+  filter: blur(0.8px) brightness(1.06);
+  pointer-events: none;
+}
+
+
 
 .suggested-recipe > h2 {
   font: 700 1.4em sans-serif;
@@ -141,6 +169,7 @@ html {
 
 .suggested-recipe * {
   line-height: 1.6;
+  position: relative;
   color: #374151;
 }
 
