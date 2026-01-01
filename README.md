@@ -15,3 +15,6 @@ Enter a list of ingredients and get a complete recipe suggestion — just like a
 
 ---
 
+## 🚀 How to Run Locally
+
+1. Clone the repo  
