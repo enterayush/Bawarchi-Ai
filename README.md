@@ -8,13 +8,10 @@ Enter a list of ingredients and get a complete recipe suggestion — just like a
 
 ## 🧪 Features
 
-✔ Get recipe suggestions from AI  
-✔ Nicely formatted recipe display  
-✔ Smooth UI with scroll-into-view  
+✔ Get recipe suggestions from AI
+✔ Nicely formatted recipe display
+✔ Smooth UI with scroll-into-view
 ✔ Ready for deployment
 
+
 ---
-
-## 🚀 How to Run Locally
-
-1. Clone the repo  
