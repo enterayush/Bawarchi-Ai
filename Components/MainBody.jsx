@@ -25,7 +25,8 @@ export default function MainBody() {
 
     return (
         <main>
-            <form action={addIngredients} >
+            <div className="card">
+            <form action={addIngredients}  >
                 <input
                     className="ingredient-input"
                     type="text" placeholder="e.g oregano"
@@ -37,6 +38,7 @@ export default function MainBody() {
             {ingredients.length > 0 ?<IngredientList ingredients={ingredients} getRecipe={getRecipe}/>:
                 <p className="no-ingredients-message">Please, add at least four ingredients to generate a recipe.</p>
             }
+            </div>
 
             {recipe && <Recipe recipe={recipe}/>}
 

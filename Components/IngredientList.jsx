@@ -6,7 +6,7 @@ const ingredientsList = props.ingredients.map((ingredient) =>
 
     return(
         
-        <section>
+        <section >
                 <h2>Ingredients on Hand</h2>
                 <ul className="ingredients-list"> {ingredientsList}</ul>
 

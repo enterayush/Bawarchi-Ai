@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #fafaf7;
+  background-color: #FFF1CA;
 }
 
 header{
@@ -10,10 +10,9 @@ header{
   justify-content: center;
   gap: 10px;
   padding: 5px 20px;
-  background-color: #4A2E2A;
+  background-color: #6A4B3A   ;
   color: white;
-  border-bottom: 1px solid #dededd;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.80);
 }
 
 header>h1 {
@@ -27,8 +26,8 @@ header img {
 }
 
 main{
-  padding: 90px 72px;
-  background-color: #FAF7F2;
+  padding: 60px 72px;
+  /* background-color: #FAF7F2; */
 }
 
 form{
@@ -65,7 +64,7 @@ form{
 
 section{
   /* display: flex; */
-  margin-left: 400px;
+  margin-left: 120px;
   /* padding: 30px; */
   
 }
@@ -90,7 +89,7 @@ section ul{
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-right: 420px;
+  margin-right: 140px;
   background-color: #f0efeb;
 
 }
@@ -121,30 +120,62 @@ section ul{
 }
 
 .no-ingredients-message{
-  margin-left: 25.2em;
+  margin-left: 4.2em;
   font: 0.99em sans-serif;
   color: #d44f23;
   margin-top: 20px;
   
 }
 
-/* Recipe Styles */
 
 html {
   scroll-behavior: smooth;
 }
+/* ingredient styles */
+.card {
+  background: #FFFFF0;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 26px 28px;
+  box-shadow: 16px 20px 60px 10px rgba(0, 0, 0, 0.40);
+  max-width: 720px;
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/recipe-bg3.png");
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  opacity: 0.40;         /* ← KEY part */
+  filter: blur(0.8px) brightness(1.06);
+  pointer-events: none;
+}
+
+.card > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+
+/* Recipe Styles */
 
 
 .suggested-recipe {
   max-width: 720px;
   margin: 40px auto;
   padding: 24px 28px;
-
-  background: #FFFFF0; /* ivory base */
+  background: #FFFFF0;
   border: 1px solid #e5e7eb;
   border-radius: 14px;
   box-shadow: 16px 20px 60px 10px rgba(0, 0, 0, 0.40);
-
   position: relative;
   overflow: hidden;
 }
@@ -217,3 +248,90 @@ html {
   border-top: 1px solid #e5e7eb;
   margin: 16px 0;
 }
+
+
+
+/* --------------------  TABLET  -------------------- */
+@media (max-width: 1024px) {
+  main {
+    padding: 40px 28px;
+  }
+
+  .card,
+  .suggested-recipe {
+    max-width: 660px;
+  }
+}
+
+
+/* --------------------  MOBILE  -------------------- */
+@media (max-width: 768px) {
+
+  /* Header */
+  header {
+    padding: 10px 14px;
+    gap: 6px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  header img {
+    height: 72px;
+    width: 72px;
+  }
+
+  header h1 {
+    font-size: 18px;
+  }
+
+  /* Main */
+  main {
+    padding: 20px 14px;
+  }
+
+  /* Form becomes vertical */
+  form {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .ingredient-input {
+    width: 100%;
+    max-width: none;
+  }
+
+  .submit-button {
+    width: 100%;
+    padding: 12px;
+  }
+
+  /* Cards fit screen */
+  .card,
+  .suggested-recipe {
+    width: calc(100% - 24px);
+    max-width: 480px;
+    margin: 12px auto;
+    padding: 16px 14px;
+
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.22); /* reduced shadow */
+  }
+
+  /* Remove desktop margins */
+  section,
+  .get-recipe-button,
+  .no-ingredients-message {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* CTA layout stacks */
+  .get-recipe-button {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 12px;
+  }
+}
+
